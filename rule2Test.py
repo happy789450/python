@@ -22,7 +22,18 @@ import re
 # if result:
 #     print('匹配成功 {}'.format(result.group()))
 # 匹配有限demo 格式xxxx@163.com
-regexMail=re.match('[a-zA-Z0-9]{6,11}@163.com','sldjgfsdfosdfi@163.com')
-if regexMail:
-    print('匹配成功 {}'.format(regexMail.group()))
-    pass
+# regexMail=re.match('[a-zA-Z0-9]{6,11}@163.com','sldjgfsdfosdfi@163.com')
+# if regexMail:
+#     print('匹配成功 {}'.format(regexMail.group()))
+#     pass
+# print(re.match('c:\\\\a.txt','c:\\a.txt').group())
+# print(re.match(r'c:\\a.txt','c:\\a.txt').group()) #在正则前面加r 表示原生的字符串 python字符串就不会转义
+# ^ 匹配字符串的开头
+# result=re.match('^P.{6}','Python is language')
+# result=re.match('^P\w{5}','Python is language')
+# if result:
+#     print(result.group())
+# $ 匹配结尾
+result=re.match('\w{5,15}@\w{2,5}.com$','asdfweoji@123.com')
+if result:
+    print(result.group())
